@@ -1,9 +1,4 @@
-
-.topnav {
-    position: relative;
-    background-color: #333;
-    overflow: hidden;
-  }
+* {cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😀</text></svg>") 16 0,auto;} /*!emojicursor.app*/
 
   .center {
     display: block;
@@ -12,9 +7,6 @@
     width: 50%;
   }
 
-  body {
-    background-color: lightblue;
-  }
 
   img {
     display: block;
@@ -78,4 +70,175 @@ li {
 .fa-pinterest {
   background: #cb2027;
   color: white;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+.container {
+  min-height: 15vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  background-color: var(--complimentary-color);
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ position: relative;
+}
+
+h1 {
+  font-size: 100px;
+  color: var(--primary-color);
+  transform: translateY(-600px);
+  animation: 1.2s slideIn ease-in-out forwards 1s;
+  z-index: 10;
+  opacity: 0;
+  position: relative;
+}
+
+h1::before {
+    content: '';
+    width: 0%;
+    height: 10px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    animation: 1s underline ease-in-out forwards 2s;
+    mix-blend-mode: screen;
+}
+
+
+
+@keyframes skewBg {
+  0% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes underline {
+  100% {
+    width: 10%;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.card {
+  background-color: var(--background);
+  display: block;
+  width: 300px;
+  min-height: 90px;
+  border: 3px solid var(--primary);
+  padding: 10px;
+  margin: calc(15vh - 15px) auto 0 auto;
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+        20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 
+        30px -30px 0 -3px var(--background), 30px -30px var(--orange), 
+        40px -40px 0 -3px var(--background), 40px -40px var(--red); 
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.card:hover {
+  top: -40px;
+  left: 40px;
+  box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -3px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -3px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -3px  var(--background), 0 0 0 0  var(--red);
+}
+
+
+
+
+
+:root {
+  --primary: #555BFF;
+  --secondary: #22D2A0;
+  --background: white;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+} 
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width:740px) and (min-width: 340px) {
+
+  background-size: contain;
+    margin: 25px 6%;
+  }
+  figure { float: left;
+    width: 45%;
+    margin-right: 4.5%;
+
+  }
+}
+
+@media screen and (max-width: 1039px) and (min-width: 741px) {
+ 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-origin: border-box;
+    margin: 25px 8%;
+  }
+
+  figure {
+    float: left;
+    width: 45%;
+    margin-right: 4.5%;
+  }
+}
+
+@media screen and (min-width: 1040px) and (max-width: 1800px) {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  
+    margin: 25px 10%;
+  }
+  figure {
+    width: 30%;
+    margin-right: 2.5%;
+
+  }
 }
