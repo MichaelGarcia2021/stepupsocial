@@ -242,3 +242,38 @@ h1::before {
 
   }
 }
+
+
+.flexbox-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  
+  }
+  
+  .flexbox-item {
+    display: flex;
+    flex-direction: row;
+text-decoration-color: white;
+  height: 250px;
+  width: 450px;
+  border: solid black 10px;
+  justify-content: space-between;
+  }
+  
+  .flexone {
+    flex-direction: row;
+      flex-shrink: 0;
+  }
+  .flextwo {
+    flex-direction: ;
+      flex-shrink: 0;
+  
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
